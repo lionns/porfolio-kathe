@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BigLemon from "../../assets/icons/big_lemon.astro";
+import HalfLemon from "../../assets/icons/half_lemon.astro";
+import HalfLemonTop from "../../assets/icons/half_lemon_top.astro";
+import Pulp from "../../assets/icons/pulp.astro";
+---
+
+<Layout title="Kathe Sanchez - Porfolio" lang="es">
+  <main class="relative h-dvh flex flex-col justify-center items-center">
+    <h1
+      class="font-unique text-[85px] md:text-[128px] lg:text-[256px] text-center max-w-[264px] md:max-w-full leading-none transition-[font-size] ease-in-out duration-200"
+    >
+      LET’S BUILD SOMETHING GREATE
+    </h1>
+    <span
+      class="font-unique_light text-[63px] lg:text-[85px] text-sweet_green stroke-black transition-[font-size] ease-in-out duration-200"
+      >Kathe Sanchez</span
+    >
+    <ul class="absolute bottom-0 flex gap-5 font-unique_light">
+      <li>
+        <a class="text-[85px]" href="/fr">fr</a>
+      </li>
+      <li>
+        <a class="text-[85px] text-sweet_green" href="/en">en</a>
+      </li>
+      <li>
+        <a class="text-[85px]" href="/">es</a>
+      </li>
+    </ul>
+    <BigLemon />
+    <HalfLemon />
+    <HalfLemonTop />
+    <Pulp />
+  </main>
+</Layout>

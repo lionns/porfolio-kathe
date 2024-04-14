@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  lang: "en" | "es" | "fr";
+}
+
+const { title, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-soft_ivory">
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    min-height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+  /* Webfont: Unique-Bold */
+  @font-face {
+    font-family: "Unique";
+    src:
+      url("../assets/fonts/Unique-Bold.woff2") format("woff2"),
+      /* Modern Browsers */ url("../assets/fonts/Unique-Bold.otf")
+        format("opentype"); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Webfont: Unique-Light */
+  @font-face {
+    font-family: "UniqueLight";
+    src:
+      url("../assets/fonts/Unique-Light.woff2") format("woff2"),
+      /* Modern Browsers */ url("../assets/fonts/Unique-Light.otf")
+        format("opentype"); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+  }
+</style>
